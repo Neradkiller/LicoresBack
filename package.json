@@ -1,0 +1,28 @@
+{
+  "name": "licoresback",
+  "version": "1.0.0",
+  "description": "Backend de la aplicacion de un e-commerce de licores",
+  "main": "server.js",
+  "scripts": {
+    "lint": "standard",
+    "start": "nodemon sever.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neradkiller/LicoresBack.git"
+  },
+  "author": "Daren Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neradkiller/LicoresBack/issues"
+  },
+  "homepage": "https://github.com/Neradkiller/LicoresBack#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "standard": "^16.0.3"
+  }
+}
