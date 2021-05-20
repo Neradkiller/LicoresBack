@@ -1,10 +1,21 @@
 require('dotenv').config()
-const express = require('express')
+const app = require('./app')
+const connectDB = require('./db/mongoodb')
 
-const { appConfig } = require('./config') //Solo usa la propiedad app
+const { appConfig,db } = require('./config') //Solo usa la propiedad app
 
-const app = express()
+async function initApp(appConfig, db){
+    try
+    {
+        await connectDB(db.db_uri)
+        app.listen(appConfig.port, () => {
+            console.log(`Server listening on port ${appConfig.port}`)
+        })
+    }
+    catch(e){
+        console.error(e)
+        process.exit(0)
+    }
+}
 
-app.listen(appConfig.port, () => {
-    console.log(`Server listening on port ${appConfig.port}`)
-})
+initApp(appConfig, db)
