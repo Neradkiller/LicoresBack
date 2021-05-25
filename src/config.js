@@ -1,10 +1,9 @@
+//Variables de configuracion usadas en la aplicacion
+//Usadas de esta manera para tnerlas agrupadas en un sitio en comun
 const config = {
     appConfig: {
         host: process.env.HOST,
         port: process.env.PORT
-    },
-    db:{
-        db_uri: process.env.DB_URI
     }
 }
 

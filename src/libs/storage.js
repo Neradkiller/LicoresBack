@@ -5,10 +5,10 @@ const storage = multer.diskStorage({
       cb(null, './storage/imgs')
     },
     filename: function (req, file, cb) {
-      cb(null, `${file.fieldname}-${Date.now()}`)
+      cb(null, `${file.fieldname}-${Date.now()}.png`)
     }
   })
 
 const upload = multer({ storage })
 
-module.exports = upload
+module.exports = upload 
